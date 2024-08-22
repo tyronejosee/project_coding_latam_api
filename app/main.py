@@ -1,5 +1,7 @@
 """Main configs."""
 
+import os
+import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
@@ -69,3 +71,8 @@ def root():
 app.mount("/images", StaticFiles(directory=settings.STATIC_DIR), name="images")
 
 app.include_router(routes.router, prefix=settings.API_V1_STR)
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
