@@ -6,10 +6,12 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.requests import Request
 
 from app.core.config import settings
 from app.home import routes
 
+# API Metadata
 tags_metadata = [
     {
         "name": "Home",
@@ -17,62 +19,68 @@ tags_metadata = [
     },
 ]
 
+# Initialize FastAPI app
 app = FastAPI(
     title=settings.PROJECT_NAME,
-    description=(
-        "API for managing and accessing various services, "
-        "including strategy cards, projects, team members, "
-        "and user testimonials.\n"
-        "\nAccess the API documentation at `/docs` or `/redoc`."
-    ),
+    summary="A JSON API created for the Coding Latam community.",
+    description=("\nAccess the API documentation at `/docs` or `/redoc`."),
     version="1.0.0",
     # terms_of_service="http://example.com/terms/",
     contact={
         "name": "Coding Latam GitHub",
         "url": "https://github.com/Coding-Latam",
-        # "email": "support@example.com",
     },
     license_info={
         "name": "MIT License",
-        # "url": "http://example.com/license/",
+        "url": "https://github.com/tyronejosee/project_coding_latam_api/blob/main/LICENSE",
     },
     debug=False,
     openapi_tags=tags_metadata,
+    # servers=[
+    #     {
+    #         "url": "https://coding-latam-api.up.railway.app/",
+    #         "description": "Production",
+    #     },
+    #     {
+    #         "url": "http://127.0.0.1:8000/",
+    #         "description": "Local",
+    #     },
+    # ],
+    # docs_url="/swagger",
+    # redoc_url=None,
 )
 
-# CORS
-orig_cors_origins = [
-    "http://localhost",
-    "http://127.0.0.1",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://localhost:4200",
-    "http://127.0.0.1:4200",
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://localhost:8080",
-    "http://127.0.0.1:8080",
-]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=orig_cors_origins,
+    allow_origins=settings.CORS_ORIGINS,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET"],
     allow_headers=["*"],
 )
 
 
+# Redirect root to documentation
 @app.get("/", include_in_schema=False)
 def root():
     return RedirectResponse(url="/docs")
 
 
+# Redirect to the documentation if the page is not found
+@app.exception_handler(404)
+async def not_found_error(request: Request, exc: Exception):
+    # Redirige a la documentación si la página no se encuentra
+    return RedirectResponse(url="/docs")
+
+
+# Serve static files
 app.mount("/images", StaticFiles(directory=settings.STATIC_DIR), name="images")
 
+# Include routers
 app.include_router(routes.router, prefix=settings.API_V1_STR)
 
 
+# Run server
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)

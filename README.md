@@ -1,18 +1,17 @@
 # Coding Latam API
 
-The JSON used as the database is located in `app/data/db.py`
+The JSON used as the database is located in [`app/data/db.py`](https://github.com/tyronejosee/project_coding_latam_api/blob/main/app/data/db.py)
 
 ## Requirements
 
-- Python 3.7+
+- Python 3.8+
 
 ## Installation
 
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/usuario/nombre-del-repositorio.git
-cd nombre-del-repositorio
+git clone git@github.com:tyronejosee/project_coding_latam_api.git
 ```
 
 ### Virtual Environment Setup
@@ -69,3 +68,38 @@ Once the application is running, you can access the interactive documentation at
 
 - Swagger UI: `http://127.0.0.1:8000/docs`
 - Redoc: `http://127.0.0.1:8000/redoc`
+
+## Deploy
+
+### Example with Railway
+
+Log in or sign up at [railway.app](https://railway.app/).
+
+Select New on your dashboard and Deploy from GitHub repo:
+
+![Example-01](/app/static/images/examples/01.png)
+
+Configure and grant permission to the specific repositories for deployment:
+
+![Example-02](/app/static/images/examples/02.png)
+![Example-03](/app/static/images/examples/03.png)
+
+Go to the Settings tab of the instance.
+
+![Example-04](/app/static/images/examples/04.png)
+
+Add the command `pip install -r requirements.txt` in the `Custom Build Command` field:
+
+![Example-05](/app/static/images/examples/05.png)
+
+Add the command `uvicorn app.main:app --host 0.0.0.0 --port $PORT` in the `Custom Start Command` field:
+
+![Example-06](/app/static/images/examples/06.png)
+
+After completing the Railway process, click on `Generate Domain` within `Settings`:
+
+![Example-07](/app/static/images/examples/07.png)
+
+And your API will be deployed successfully. 🎉🎉
+
+![Example-08](/app/static/images/examples/08.png)
