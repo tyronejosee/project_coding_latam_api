@@ -11,6 +11,7 @@ from starlette.requests import Request
 from app.core.config import settings
 from app.home import routes
 
+
 # API Metadata
 tags_metadata = [
     {
@@ -24,7 +25,7 @@ app = FastAPI(
     title=settings.PROJECT_NAME,
     summary="A JSON API created for the Coding Latam community.",
     description=("\nAccess the API documentation at `/docs` or `/redoc`."),
-    version="1.0.0",
+    version=str(os.environ.get("API_VERSION")),
     # terms_of_service="http://example.com/terms/",
     contact={
         "name": "Coding Latam GitHub",
@@ -50,7 +51,6 @@ app = FastAPI(
     # redoc_url=None,
 )
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.CORS_ORIGINS,
@@ -69,7 +69,6 @@ def root():
 # Redirect to the documentation if the page is not found
 @app.exception_handler(404)
 async def not_found_error(request: Request, exc: Exception):
-    # Redirige a la documentación si la página no se encuentra
     return RedirectResponse(url="/docs")
 
 
@@ -80,7 +79,6 @@ app.mount("/images", StaticFiles(directory=settings.STATIC_DIR), name="images")
 app.include_router(routes.router, prefix=settings.API_V1_STR)
 
 
-# Run server
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)

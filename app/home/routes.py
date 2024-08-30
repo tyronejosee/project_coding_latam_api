@@ -4,45 +4,25 @@ from typing import List
 from fastapi import APIRouter
 
 from app.home.schemas import (
-    Service,
-    Testimonial,
     Faqs,
     Project,
-    Team,
+    Service,
+    Sponsor,
     StrategyCard,
+    Team,
+    Testimonial,
 )
 from app.data.db import (
-    services_data,
-    testimonials_data,
     faqs_data,
     projects_data,
-    team_data,
+    services_data,
+    sponsors_data,
     strategy_cards_data,
+    team_data,
+    testimonials_data,
 )
 
 router = APIRouter()
-
-
-@router.get(
-    "/services",
-    response_model=List[Service],
-    tags=["Home"],
-    summary="Retrieves all available services",
-    description="Fetches a comprehensive list of all services provided, including details like title, description, and link.",
-)
-async def get_services():
-    return services_data
-
-
-@router.get(
-    "/testimonials",
-    response_model=List[Testimonial],
-    tags=["Home"],
-    summary="Retrieves all user testimonials",
-    description="Fetches a list of user testimonials including their author, image, area of expertise, and testimonial content.",
-)
-async def get_testimonials():
-    return testimonials_data
 
 
 @router.get(
@@ -68,14 +48,25 @@ async def get_projects():
 
 
 @router.get(
-    "/team",
-    response_model=List[Team],
+    "/services",
+    response_model=List[Service],
     tags=["Home"],
-    summary="Retrieves all team members",
-    description="Fetches a list of team members including their name, image, role, and slogan.",
+    summary="Retrieves all available services",
+    description="Fetches a comprehensive list of all services provided, including details like title, description, and link.",
 )
-async def get_team():
-    return team_data
+async def get_services():
+    return services_data
+
+
+@router.get(
+    "/sponsors",
+    response_model=List[Sponsor],
+    tags=["Home"],
+    summary="Retrieve all sponsors",
+    description="Fetches all the available sponsors with their respective details, including title and image.",
+)
+async def get_sponsors():
+    return sponsors_data
 
 
 @router.get(
@@ -87,3 +78,25 @@ async def get_team():
 )
 async def get_strategy_cards():
     return strategy_cards_data
+
+
+@router.get(
+    "/team",
+    response_model=List[Team],
+    tags=["Home"],
+    summary="Retrieves all team members",
+    description="Fetches a list of team members including their name, image, role, and slogan.",
+)
+async def get_team():
+    return team_data
+
+
+@router.get(
+    "/testimonials",
+    response_model=List[Testimonial],
+    tags=["Home"],
+    summary="Retrieves all user testimonials",
+    description="Fetches a list of user testimonials including their author, image, area of expertise, and testimonial content.",
+)
+async def get_testimonials():
+    return testimonials_data

@@ -52,6 +52,14 @@ pip install -r requirements.txt
 poetry install
 ```
 
+Create a copy of the `.env.example` file and rename it to `.env`.
+
+```bash
+cp .env.example .env
+```
+
+**Update the values of the environment variables (Important).**
+
 ## Running the Application
 
 To run the application in development mode, use:

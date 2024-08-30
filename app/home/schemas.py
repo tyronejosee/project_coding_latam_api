@@ -4,14 +4,12 @@ from pydantic import BaseModel
 
 
 class Faqs(BaseModel):
-
     id: int
     question: str
     answer: str
 
 
 class Project(BaseModel):
-
     id: int
     image: str
     title: str
@@ -19,7 +17,6 @@ class Project(BaseModel):
 
 
 class Service(BaseModel):
-
     id: int
     title: str
     image: str
@@ -27,15 +24,19 @@ class Service(BaseModel):
     link: str
 
 
-class StrategyCard(BaseModel):
+class Sponsor(BaseModel):
+    id: int
+    title: str
+    image: str
 
+
+class StrategyCard(BaseModel):
     id: int
     title: str
     description: str
 
 
 class Team(BaseModel):
-
     id: int
     image: str
     name: str
@@ -44,7 +45,6 @@ class Team(BaseModel):
 
 
 class Testimonial(BaseModel):
-
     id: int
     author: str
     image: str

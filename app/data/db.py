@@ -166,3 +166,42 @@ strategy_cards_data = [
         "description": "Evaluate the strengths, weaknesses, opportunities, and threats associated with the new strategy.",
     },
 ]
+
+
+sponsors_data = [
+    {
+        "id": 1,
+        "title": "Brailie",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/brailie.png",
+    },
+    {
+        "id": 2,
+        "title": "Keepsal",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/keepsal.png",
+    },
+    {
+        "id": 3,
+        "title": "Kybo",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/kybo.png",
+    },
+    {
+        "id": 4,
+        "title": "Malor",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/malor.png",
+    },
+    {
+        "id": 5,
+        "title": "Reatin",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/reatin.png",
+    },
+    {
+        "id": 6,
+        "title": "Slowa",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/slowa.png",
+    },
+    {
+        "id": 7,
+        "title": "Webpaint",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/webpaint.png",
+    },
+]
