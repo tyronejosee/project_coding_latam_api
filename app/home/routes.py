@@ -5,6 +5,7 @@ from fastapi import APIRouter
 
 from app.home.schemas import (
     Faqs,
+    NavItem,
     Project,
     Service,
     Sponsor,
@@ -14,6 +15,7 @@ from app.home.schemas import (
 )
 from app.data.db import (
     faqs_data,
+    nav_items_data,
     projects_data,
     services_data,
     sponsors_data,
@@ -34,6 +36,17 @@ router = APIRouter()
 )
 async def get_faqs():
     return faqs_data
+
+
+@router.get(
+    "/nav-items",
+    response_model=List[NavItem],
+    tags=["Home"],
+    summary="Retrieves all the items from the navbar",
+    description="Fetches a list of items for the navbar.",
+)
+async def get_nav_items():
+    return nav_items_data
 
 
 @router.get(

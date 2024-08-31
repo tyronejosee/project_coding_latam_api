@@ -1,5 +1,83 @@
 """Global data example."""
 
+
+faqs_data = [
+    {
+        "id": 1,
+        "question": "How do I reset my password?",
+        "answer": "To reset your password, click on 'Forgot Password' at the login page, and follow the instructions sent to your email. If you don't receive an email, check your spam folder or contact support.",
+    },
+    {
+        "id": 2,
+        "question": "Can I change my subscription plan?",
+        "answer": "Yes, you can upgrade or downgrade your subscription plan at any time from your account settings. The changes will take effect immediately, and you will be charged or credited the difference accordingly.",
+    },
+    {
+        "id": 3,
+        "question": "How do I contact customer support?",
+        "answer": "You can contact our customer support team via email at support@company.com or through our live chat feature available on our website. We are available 24/7 to assist you with any issues.",
+    },
+    {
+        "id": 4,
+        "question": "Is my personal information secure?",
+        "answer": "Yes, we take your privacy and security seriously. All personal information is encrypted and stored securely in compliance with industry standards. For more details, please review our Privacy Policy.",
+    },
+]
+
+nav_items_data = [
+    {
+        "id": 1,
+        "name": "Demos",
+        "link": "/demos",
+    },
+    {
+        "id": 2,
+        "name": "Pages",
+        "link": "/pages",
+    },
+    {
+        "id": 3,
+        "name": "Projects",
+        "link": "/projects",
+    },
+    {
+        "id": 4,
+        "name": "Blog",
+        "link": "/blog",
+    },
+    {
+        "id": 5,
+        "name": "Blocks",
+        "link": "/blocks",
+    },
+    {
+        "id": 6,
+        "name": "Documentation",
+        "link": "/documentation",
+    },
+]
+
+projects_data = [
+    {
+        "id": 1,
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290242/images/projects/project1_kwycbw.jpg",
+        "name": "Fitness Tracker App",
+        "category": "Mobile Development",
+    },
+    {
+        "id": 2,
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290242/images/projects/project2_ghd4sr.jpg",
+        "name": "Online Learning Platform",
+        "category": "Education Technology",
+    },
+    {
+        "id": 3,
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290242/images/projects/project3_joybkb.jpg",
+        "name": "Digital Magazine",
+        "category": "Content Publishing",
+    },
+]
+
 services_data = [
     {
         "id": 1,
@@ -24,6 +102,92 @@ services_data = [
     },
 ]
 
+sponsors_data = [
+    {
+        "id": 1,
+        "name": "Brailie",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/brailie.png",
+    },
+    {
+        "id": 2,
+        "name": "Keepsal",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/keepsal.png",
+    },
+    {
+        "id": 3,
+        "name": "Kybo",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/kybo.png",
+    },
+    {
+        "id": 4,
+        "name": "Malor",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/malor.png",
+    },
+    {
+        "id": 5,
+        "name": "Reatin",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/reatin.png",
+    },
+    {
+        "id": 6,
+        "name": "Slowa",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/slowa.png",
+    },
+    {
+        "id": 7,
+        "name": "Webpaint",
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/webpaint.png",
+    },
+]
+
+strategy_cards_data = [
+    {
+        "id": 1,
+        "name": "Brainstorming Session",
+        "description": "Gather team members to generate and discuss innovative ideas for upcoming projects.",
+    },
+    {
+        "id": 2,
+        "name": "Market Analysis",
+        "description": "Conduct thorough research on market trends and customer preferences to identify opportunities.",
+    },
+    {
+        "id": 3,
+        "name": "SWOT Analysis",
+        "description": "Evaluate the strengths, weaknesses, opportunities, and threats associated with the new strategy.",
+    },
+]
+
+team_data = [
+    {
+        "id": 1,
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290244/images/team/te1_srxivw.jpg",
+        "name": "Michael Reyes",
+        "area": "UX/UI Designer",
+        "slogan": "Designing seamless user experiences that inspire.",
+    },
+    {
+        "id": 2,
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290244/images/team/te2_wzilmz.jpg",
+        "name": "Alexandra Blake",
+        "area": "Lead Developer",
+        "slogan": "Transforming ideas into innovative solutions.",
+    },
+    {
+        "id": 3,
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290244/images/team/te3_pxsgiv.jpg",
+        "name": "David Moore",
+        "area": "Data Scientist",
+        "slogan": "Turning data into actionable insights.",
+    },
+    {
+        "id": 4,
+        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290244/images/team/te4_wffye2.jpg",
+        "name": "Jessica Chen",
+        "area": "Project Manager",
+        "slogan": "Keeping projects on track and on time.",
+    },
+]
 
 testimonials_data = [
     {
@@ -67,141 +231,5 @@ testimonials_data = [
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290244/images/team/te2_wzilmz.jpg",
         "area": "CEO",
         "testimonial": "The strategic guidance provided has been instrumental in our company's growth. Their ability to understand our vision and execute it effectively is truly impressive.",
-    },
-]
-
-
-faqs_data = [
-    {
-        "id": 1,
-        "question": "How do I reset my password?",
-        "answer": "To reset your password, click on 'Forgot Password' at the login page, and follow the instructions sent to your email. If you don't receive an email, check your spam folder or contact support.",
-    },
-    {
-        "id": 2,
-        "question": "Can I change my subscription plan?",
-        "answer": "Yes, you can upgrade or downgrade your subscription plan at any time from your account settings. The changes will take effect immediately, and you will be charged or credited the difference accordingly.",
-    },
-    {
-        "id": 3,
-        "question": "How do I contact customer support?",
-        "answer": "You can contact our customer support team via email at support@company.com or through our live chat feature available on our website. We are available 24/7 to assist you with any issues.",
-    },
-    {
-        "id": 4,
-        "question": "Is my personal information secure?",
-        "answer": "Yes, we take your privacy and security seriously. All personal information is encrypted and stored securely in compliance with industry standards. For more details, please review our Privacy Policy.",
-    },
-]
-
-
-projects_data = [
-    {
-        "id": 1,
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290242/images/projects/project1_kwycbw.jpg",
-        "name": "Fitness Tracker App",
-        "category": "Mobile Development",
-    },
-    {
-        "id": 2,
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290242/images/projects/project2_ghd4sr.jpg",
-        "name": "Online Learning Platform",
-        "category": "Education Technology",
-    },
-    {
-        "id": 3,
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290242/images/projects/project3_joybkb.jpg",
-        "name": "Digital Magazine",
-        "category": "Content Publishing",
-    },
-]
-
-
-team_data = [
-    {
-        "id": 1,
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290244/images/team/te1_srxivw.jpg",
-        "name": "Michael Reyes",
-        "area": "UX/UI Designer",
-        "slogan": "Designing seamless user experiences that inspire.",
-    },
-    {
-        "id": 2,
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290244/images/team/te2_wzilmz.jpg",
-        "name": "Alexandra Blake",
-        "area": "Lead Developer",
-        "slogan": "Transforming ideas into innovative solutions.",
-    },
-    {
-        "id": 3,
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290244/images/team/te3_pxsgiv.jpg",
-        "name": "David Moore",
-        "area": "Data Scientist",
-        "slogan": "Turning data into actionable insights.",
-    },
-    {
-        "id": 4,
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290244/images/team/te4_wffye2.jpg",
-        "name": "Jessica Chen",
-        "area": "Project Manager",
-        "slogan": "Keeping projects on track and on time.",
-    },
-]
-
-
-strategy_cards_data = [
-    {
-        "id": 1,
-        "name": "Brainstorming Session",
-        "description": "Gather team members to generate and discuss innovative ideas for upcoming projects.",
-    },
-    {
-        "id": 2,
-        "name": "Market Analysis",
-        "description": "Conduct thorough research on market trends and customer preferences to identify opportunities.",
-    },
-    {
-        "id": 3,
-        "name": "SWOT Analysis",
-        "description": "Evaluate the strengths, weaknesses, opportunities, and threats associated with the new strategy.",
-    },
-]
-
-
-sponsors_data = [
-    {
-        "id": 1,
-        "name": "Brailie",
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/brailie.png",
-    },
-    {
-        "id": 2,
-        "name": "Keepsal",
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/keepsal.png",
-    },
-    {
-        "id": 3,
-        "name": "Kybo",
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/kybo.png",
-    },
-    {
-        "id": 4,
-        "name": "Malor",
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/malor.png",
-    },
-    {
-        "id": 5,
-        "name": "Reatin",
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/reatin.png",
-    },
-    {
-        "id": 6,
-        "name": "Slowa",
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/slowa.png",
-    },
-    {
-        "id": 7,
-        "name": "Webpaint",
-        "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/webpaint.png",
     },
 ]

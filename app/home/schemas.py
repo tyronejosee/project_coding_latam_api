@@ -9,6 +9,12 @@ class Faqs(BaseModel):
     answer: str
 
 
+class NavItem(BaseModel):
+    id: int
+    name: str
+    link: str
+
+
 class Project(BaseModel):
     id: int
     image: str
