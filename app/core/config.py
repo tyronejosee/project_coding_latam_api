@@ -22,6 +22,8 @@ class Settings(BaseSettings):
         "http://localhost:8080",
         "http://127.0.0.1:8080",
         "https://proyecto-web-react.vercel.app",
+        "https://proyecto-web-react-git-main-coding-latam.vercel.app",
+        "https://proyecto-web-react-bmk78v7zz-coding-latam.vercel.app",
     ]
 
     class Config:
