@@ -3,21 +3,21 @@
 services_data = [
     {
         "id": 1,
-        "title": "Web Design",
+        "name": "Web Design",
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290243/images/services/service1_ajvywk.png",
         "description": "We create visually stunning and user-friendly websites tailored to enhance your online presence. Our designs ensure optimal functionality and a seamless user experience.",
         "link": "/",
     },
     {
         "id": 2,
-        "title": "3D Modeling and Animation",
+        "name": "3D Modeling and Animation",
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290243/images/services/service2_qlnaaw.png",
         "description": "Bring your ideas to life with our high-quality 3D modeling and animation services. Perfect for product visualization, architectural walkthroughs, and engaging animations.",
         "link": "/",
     },
     {
         "id": 3,
-        "title": "Illustration Services",
+        "name": "Illustration Services",
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290243/images/services/service3_ipgbef.png",
         "description": "Our custom illustration services help your brand stand out. From digital to traditional artwork, we create unique visuals that effectively convey your message.",
         "link": "/",
@@ -99,19 +99,19 @@ projects_data = [
     {
         "id": 1,
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290242/images/projects/project1_kwycbw.jpg",
-        "title": "Fitness Tracker App",
+        "name": "Fitness Tracker App",
         "category": "Mobile Development",
     },
     {
         "id": 2,
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290242/images/projects/project2_ghd4sr.jpg",
-        "title": "Online Learning Platform",
+        "name": "Online Learning Platform",
         "category": "Education Technology",
     },
     {
         "id": 3,
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724290242/images/projects/project3_joybkb.jpg",
-        "title": "Digital Magazine",
+        "name": "Digital Magazine",
         "category": "Content Publishing",
     },
 ]
@@ -152,17 +152,17 @@ team_data = [
 strategy_cards_data = [
     {
         "id": 1,
-        "title": "Brainstorming Session",
+        "name": "Brainstorming Session",
         "description": "Gather team members to generate and discuss innovative ideas for upcoming projects.",
     },
     {
         "id": 2,
-        "title": "Market Analysis",
+        "name": "Market Analysis",
         "description": "Conduct thorough research on market trends and customer preferences to identify opportunities.",
     },
     {
         "id": 3,
-        "title": "SWOT Analysis",
+        "name": "SWOT Analysis",
         "description": "Evaluate the strengths, weaknesses, opportunities, and threats associated with the new strategy.",
     },
 ]
@@ -171,37 +171,37 @@ strategy_cards_data = [
 sponsors_data = [
     {
         "id": 1,
-        "title": "Brailie",
+        "name": "Brailie",
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/brailie.png",
     },
     {
         "id": 2,
-        "title": "Keepsal",
+        "name": "Keepsal",
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/keepsal.png",
     },
     {
         "id": 3,
-        "title": "Kybo",
+        "name": "Kybo",
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/kybo.png",
     },
     {
         "id": 4,
-        "title": "Malor",
+        "name": "Malor",
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/malor.png",
     },
     {
         "id": 5,
-        "title": "Reatin",
+        "name": "Reatin",
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033954/images/sponsors/reatin.png",
     },
     {
         "id": 6,
-        "title": "Slowa",
+        "name": "Slowa",
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/slowa.png",
     },
     {
         "id": 7,
-        "title": "Webpaint",
+        "name": "Webpaint",
         "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725033953/images/sponsors/webpaint.png",
     },
 ]

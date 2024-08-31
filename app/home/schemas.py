@@ -12,13 +12,13 @@ class Faqs(BaseModel):
 class Project(BaseModel):
     id: int
     image: str
-    title: str
+    name: str
     category: str
 
 
 class Service(BaseModel):
     id: int
-    title: str
+    name: str
     image: str
     description: str
     link: str
@@ -26,13 +26,13 @@ class Service(BaseModel):
 
 class Sponsor(BaseModel):
     id: int
-    title: str
+    name: str
     image: str
 
 
 class StrategyCard(BaseModel):
     id: int
-    title: str
+    name: str
     description: str
 
 

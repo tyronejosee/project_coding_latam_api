@@ -41,7 +41,7 @@ async def get_faqs():
     response_model=List[Project],
     tags=["Home"],
     summary="Retrieve all projects",
-    description="Fetches a list of projects including details such as title, category, and image.",
+    description="Fetches a list of projects including details such as name, category, and image.",
 )
 async def get_projects():
     return projects_data
@@ -52,7 +52,7 @@ async def get_projects():
     response_model=List[Service],
     tags=["Home"],
     summary="Retrieves all available services",
-    description="Fetches a comprehensive list of all services provided, including details like title, description, and link.",
+    description="Fetches a comprehensive list of all services provided, including details like name, description, and link.",
 )
 async def get_services():
     return services_data
@@ -63,7 +63,7 @@ async def get_services():
     response_model=List[Sponsor],
     tags=["Home"],
     summary="Retrieve all sponsors",
-    description="Fetches all the available sponsors with their respective details, including title and image.",
+    description="Fetches all the available sponsors with their respective details, including name and image.",
 )
 async def get_sponsors():
     return sponsors_data
@@ -74,7 +74,7 @@ async def get_sponsors():
     response_model=List[StrategyCard],
     tags=["Home"],
     summary="Retrieve all strategy cards",
-    description="Fetches all the available strategy cards with their respective details like title, description, and other attributes.",
+    description="Fetches all the available strategy cards with their respective details like name, description, and other attributes.",
 )
 async def get_strategy_cards():
     return strategy_cards_data
